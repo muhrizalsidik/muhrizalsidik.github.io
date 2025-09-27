@@ -8,7 +8,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
-<!--   <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"> -->
+  <!--   <link rel="stylesheet" href="bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"> -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +19,94 @@
   <!-- simplyCountDown -->
   <link rel="stylesheet" href="simplyCountdown/simplyCountdown.theme.default.css">
   <script src="simplyCountdown/simplyCountdown.min.js"></script>
+
+  <!-- Untuk style nomor rekening -->
+  <style>
+    .rekening-card {
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      max-width: 360px;
+      width: 100%;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .rekening-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .rekening-header img {
+      width: 40px;
+      margin-right: 10px;
+    }
+
+    .rekening-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .rekening-box {
+      background-color: #f9f9f9;
+      padding: 14px 20px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .rekening-box span {
+      user-select: text;
+    }
+
+    .rekening-text {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+
+    .copy-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background-color: #43a047;
+    }
+
+    .nama-pemilik {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .copy-success {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #4CAF50;
+      display: none;
+    }
+
+    .qris-img {
+      margin-top: 20px;
+      width: 150px;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -29,14 +117,16 @@
       <h1>Rizal & Milda</h1>
       <p>Akan melangsungkan resepsi pernikahan dalam:</p>
       <div class="simply-countdown"></div>
-      <a href="#HOME" class="btn btn-lg mt-4" onClick="enableScroll()"> <i class="bi bi-envelope-heart-fill"> Lihat Undangan</i></a>
+      <a href="#HOME" class="btn btn-lg mt-4" onClick="enableScroll()"> <i class="bi bi-envelope-heart-fill"> Lihat
+          Undangan</i></a>
     </main>
   </section>
 
   <nav class="navbar navbar-expand-md bg-transparent sticky-top myNavbar">
     <div class="container">
       <a class="navbar-brand" href="#">Wedding</a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -64,7 +154,8 @@
         <div class="col-md-8 text-center">
           <h2>Acara Pernikahan</h2>
           <h3>Diselenggarakan pada 20-mei-2025 di Lampung, Lampung Barat</h3>
-          <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan kami.</p>
+          <p>Oleh karena itu, dengan segala hormat, kami bermaksud untuk mengundang Bapak/Ibu, Saudara/i, untuk hadir
+            pada acara pernikahan kami.</p>
         </div>
       </div>
 
@@ -73,7 +164,8 @@
           <div class="row">
             <div class="col-8 text-end">
               <h3>Rizal</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non, sequi ad omnis temporibus asperiores.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non, sequi ad omnis temporibus
+                asperiores.</p>
               <p>Putra dari Bpk. Eli (Alm.) <br> dan <br> Ibu Eha</p>
             </div>
             <div class="col-4">
@@ -89,7 +181,8 @@
             </div>
             <div class="col-8">
               <h3>Milda</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non, sequi ad omnis temporibus asperiores.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis non, sequi ad omnis temporibus
+                asperiores.</p>
               <p>Putra dari Bpk. Suhardi <br> dan <br> Ibu Masriwati</p>
             </div>
           </div>
@@ -101,16 +194,18 @@
   <section id="INFO" class="INFO">
     <div class="container">
       <div class="row justify-content-center">
-      <div class="col-md-8 col-10 text-center">
-        <h2>Informasi Acara</h2>
-        <p class="alamat">Alamat : Desa Way Empulau Ulu, Kecamatan Balik Bukit, Lampung, Indonesia</p>
-        <a href="https://www.bing.com/maps?osid=29ff2df0-9a13-4f24-8231-6ed9e205a3e1&cp=-5.055503~104.037955&lvl=12.37&pi=0&v=2&sV=2&form=S00027" target="_blank" class="btn btn-sm btn-light my-3">
-          <i class="bi bi-sign-turn-right"> Klik untuk membuka pera</i>
-        </a>
-        <p class="description">
-          Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang dilangsungkan pernikahan, boleh jadi anda salah jadwal, atau salah tempat.
-        </p>
-      </div>
+        <div class="col-md-8 col-10 text-center">
+          <h2>Informasi Acara</h2>
+          <p class="alamat">Alamat : Desa Way Empulau Ulu, Kecamatan Balik Bukit, Lampung, Indonesia</p>
+          <a href="https://www.bing.com/maps?osid=29ff2df0-9a13-4f24-8231-6ed9e205a3e1&cp=-5.055503~104.037955&lvl=12.37&pi=0&v=2&sV=2&form=S00027"
+            target="_blank" class="btn btn-sm btn-light my-3">
+            <i class="bi bi-sign-turn-right"> Klik untuk membuka pera</i>
+          </a>
+          <p class="description">
+            Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang
+            dilangsungkan pernikahan, boleh jadi anda salah jadwal, atau salah tempat.
+          </p>
+        </div>
       </div>
 
       <div class="row justify-content-center mt-4">
@@ -164,7 +259,8 @@
         <div class="col-md-8 col-10 text-center">
           <span>Bagaimana cinta kami bersemi</span>
           <h2>Cerita Kami</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, blanditiis. Nobis labore quod veritatis fugiat?</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, blanditiis. Nobis labore quod veritatis
+            fugiat?</p>
         </div>
       </div>
       <div class="row">
@@ -178,7 +274,8 @@
                   <span>17-Agustus-2018</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolorum fugiat fugit quasi quidem.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed sunt dolorum fugiat fugit quasi
+                    quidem.</p>
                 </div>
               </div>
             </li>
@@ -190,7 +287,8 @@
                   <span>17-Agustus-2024</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, delectus deleniti. Omnis enim dolorum voluptates facilis maxime in.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, delectus deleniti. Omnis enim
+                    dolorum voluptates facilis maxime in.</p>
                 </div>
               </div>
             </li>
@@ -202,7 +300,8 @@
                   <span>07-Juli-2025</span>
                 </div>
                 <div class="timeline-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et nesciunt doloribus nisi non doloremque nobis dignissimos perspiciatis fuga iure.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et nesciunt doloribus nisi non
+                    doloremque nobis dignissimos perspiciatis fuga iure.</p>
                 </div>
               </div>
             </li>
@@ -218,7 +317,8 @@
         <div class="col-md-8 col-10 text-center">
           <span>Memori Kisah Kami</span>
           <h2>Gallery Foto</h2>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda quam veniam delectus quo? At?</p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus assumenda quam veniam delectus quo? At?
+          </p>
         </div>
       </div>
 
@@ -280,7 +380,9 @@
           <p>Isi form dibawah ini untuk melakukan konfirmasi kehadiran</p>
         </div>
       </div>
-      <form action="https://script.google.com/macros/s/AKfycbw8WTt-i1jjL78bgRtiLuPQlvSZ2XbdsHKr-YkFt4T5JQ6pO3xVo9KxnBw-QVXZRqd5/exec" class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" id="myForm">
+      <form
+        action="https://script.google.com/macros/s/AKfycbw8WTt-i1jjL78bgRtiLuPQlvSZ2XbdsHKr-YkFt4T5JQ6pO3xVo9KxnBw-QVXZRqd5/exec"
+        class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" id="myForm">
         <div class="row">
           <div class="col-12">
             <div class="mb-3">
@@ -312,26 +414,28 @@
         <div class="col-md-6">
           <div id="disqus_thread"></div>
           <script>
-              /**
-              *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-              *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-              /*
-              var disqus_config = function () {
-              this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-              this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-              };
-              */
-              (function() { // DON'T EDIT BELOW THIS LINE
-              var d = document, s = d.createElement('script');
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function () { // DON'T EDIT BELOW THIS LINE
+              var d = document,
+                s = d.createElement('script');
               s.src = 'https://my-wedding-tcjcwcj1mv.disqus.com/embed.js';
               s.setAttribute('data-timestamp', +new Date());
               (d.head || d.body).appendChild(s);
-              })();
+            })();
           </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+              Disqus.</a></noscript>
         </div>
       </div>
-      
+
     </div>
   </section>
 
@@ -341,10 +445,37 @@
         <div class="col-md-8 col-10 text-center">
           <span>Ungkapan tanda kasih</span>
           <h2>Kirim Hadiah</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum debitis aperiam tempore at impedit corporis veniam, similique repellendus nesciunt repellat.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum debitis aperiam tempore at impedit corporis
+            veniam, similique repellendus nesciunt repellat.</p>
         </div>
         <div class="row justify-content-center text-center">
-          <div class="col-md-6">
+          <div class="rekening-card mt-3 text-center">
+            <div class="rekening-header">
+              <img src="img/bca.png" alt="Logo Bank BCA">
+            </div>
+
+            <div class="rekening-box">
+              <span class="rekening-text">0987654321</span>
+              <button class="copy-btn">Salin</button>
+            </div>
+
+            <div class="nama-pemilik">a.n. pengantin pria</div>
+            <div class="copy-success" style="display: none;">✅ Nomor rekening disalin!</div>
+          </div>
+          <div class="rekening-card mt-3 text-center">
+            <div class="rekening-header">
+              <img src="img/bni.png" alt="Logo Bank BNI">
+            </div>
+
+            <div class="rekening-box">
+              <span class="rekening-text">1234567890</span>
+              <button class="copy-btn">Salin</button>
+            </div>
+
+            <div class="nama-pemilik">a.n. pengantin pria</div>
+            <div class="copy-success" style="display: none;">✅ Nomor rekening disalin!</div>
+          </div>
+          <!-- <div class="col-md-6">
             <ul class="list-group">
               <li class="list-group-item">
                 <div class="fw-bold">BCA</div>
@@ -359,7 +490,7 @@
                 <p class="bi bi-paypal"> 081383888838 - MUH. RIZAL SIDIK</p>
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -397,17 +528,29 @@
   <!-- script library countdown -->
   <script>
     simplyCountdown('.simply-countdown', {
-      year: 2025, // required
+      year: 2026, // required
       month: 05, // required
       day: 20, // required
       hours: 9, // Default is 0 [0-23] integer
       // minutes: 0, // Default is 0 [0-59] integer
       // seconds: 0, // Default is 0 [0-59] integer
       words: { //words displayed into the countdown
-        days: { singular: 'hari', plural: ' hari' },
-        hours: { singular: 'jam', plural: ' jam' },
-        minutes: { singular: 'menit', plural: ' menit' },
-        seconds: { singular: 'detik', plural: ' detik' }
+        days: {
+          singular: 'hari',
+          plural: ' hari'
+        },
+        hours: {
+          singular: 'jam',
+          plural: ' jam'
+        },
+        minutes: {
+          singular: 'menit',
+          plural: ' menit'
+        },
+        seconds: {
+          singular: 'detik',
+          plural: ' detik'
+        }
       },
       plural: true, //use plurals
       inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
@@ -432,20 +575,19 @@
 
   <!-- script untuk humberger sticky-top -->
   <script>
-    const stickyTop= document.querySelector('.sticky-top');
+    const stickyTop = document.querySelector('.sticky-top');
     const offcanvas = document.querySelector('.offcanvas');
 
-    offcanvas.addEventListener('show.bs.offcanvas',function(){
-      stickyTop.style.overflow='visible';
+    offcanvas.addEventListener('show.bs.offcanvas', function () {
+      stickyTop.style.overflow = 'visible';
     });
 
-    offcanvas.addEventListener('hidden.bs.offcanvas',function(){
-      stickyTop.style.overflow='hidden';
+    offcanvas.addEventListener('hidden.bs.offcanvas', function () {
+      stickyTop.style.overflow = 'hidden';
     });
-
   </script>
-  
-<!-- UNTUK MENJALANKAN TAMPILAN VIEW IMAGE
+
+  <!-- UNTUK MENJALANKAN TAMPILAN VIEW IMAGE
   import Lightbox from 'bs5-lightbox'; -->
   <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
   <script>
@@ -462,45 +604,45 @@
   </script>
 
   <!-- untuk disable halaman undangan sebelum di klik lihat undangan -->
-  <script>    
-    const rootElement=document.querySelector(":root");
+  <script>
+    const rootElement = document.querySelector(":root");
     const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
     const audioIcon = document.querySelector('.audio-icon-wrapper i');
     const song = document.querySelector('#song');
     let isPlaying = false;
-      
-    function disableScroll(){
+
+    function disableScroll() {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
 
-      window.onscroll=function(){
-        window.scrollTo(scrollTop,scrollLeft);
+      window.onscroll = function () {
+        window.scrollTo(scrollTop, scrollLeft);
       }
 
-      rootElement.style.scrollBehavior='auto';
+      rootElement.style.scrollBehavior = 'auto';
 
     }
 
-    function enableScroll(){
-      window.onscroll=function(){}
-      rootElement.style.scrollBehavior='smooth';
+    function enableScroll() {
+      window.onscroll = function () {}
+      rootElement.style.scrollBehavior = 'smooth';
       // localStorage.setItem('opened','true');
       playAudio();
     }
 
-    function playAudio(){
+    function playAudio() {
       song.volume = 0.1;
       audioIconWrapper.style.display = 'flex';
       song.play();
       isPlaying = true;
     }
 
-    audioIconWrapper.onclick = function(){
+    audioIconWrapper.onclick = function () {
       if (isPlaying) {
         song.pause();
         audioIcon.classList.remove('bi-disc');
         audioIcon.classList.add('bi-pause-circle');
-      }else{
+      } else {
         song.play();
         audioIcon.classList.add('bi-disc');
         audioIcon.classList.remove('bi-pause-circle');
@@ -515,12 +657,12 @@
 
     disableScroll();
   </script>
-  
+
   <!-- Script alert untuk hasil konfirmasi yang dikirim -->
   <script>
-    window.addEventListener("load", function() {
+    window.addEventListener("load", function () {
       const form = document.getElementById('myForm');
-      form.addEventListener("submit", function(e) {
+      form.addEventListener("submit", function (e) {
         e.preventDefault();
         // Tampilkan indikator loading dengan SweetAlert2
         Swal.fire({
@@ -536,31 +678,58 @@
         const data = new FormData(form);
         const action = e.target.action;
         fetch(action, {
-          method: 'POST',
-          body: data,
-        })
-        .then(() => {
-          // alert("Data berhasil terkirim!");
-          Swal.fire({
-            title: 'successed!',
-            text: 'Data berhasil terkirim!',
-            icon: 'success',
-            showConfirmButton: false,
-            timer: 3000
+            method: 'POST',
+            body: data,
           })
-        })
+          .then(() => {
+            // alert("Data berhasil terkirim!");
+            Swal.fire({
+              title: 'successed!',
+              text: 'Data berhasil terkirim!',
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 3000
+            })
+          })
       });
     });
   </script>
 
   <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const nama= urlParams.get('n') || '';
-    const pronoun= urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+    const nama = urlParams.get('n') || '';
+    const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
     const namaContainer = document.querySelector('.hero h4 span');
-    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/,',');
+    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
     document.querySelector('#nama').value = nama;
+  </script>
 
+  <!-- script untuk copy nomor rekening -->
+  <script>
+    function copyRekening(button) {
+      const card = button.closest(".rekening-card");
+      const rekening = card.querySelector(".rekening-text").textContent.trim();
+
+      navigator.clipboard.writeText(rekening).then(() => {
+        const successMsg = card.querySelector(".copy-success");
+        successMsg.style.display = "block";
+        setTimeout(() => {
+          successMsg.style.display = "none";
+        }, 2000);
+      }).catch(() => {
+        alert("Gagal menyalin nomor rekening.");
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const copyButtons = document.querySelectorAll(".copy-btn");
+
+      copyButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          copyRekening(button);
+        });
+      });
+    });
   </script>
 </body>
 
