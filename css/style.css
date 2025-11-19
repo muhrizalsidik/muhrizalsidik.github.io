@@ -554,91 +554,125 @@ footer li {
   background-color: #0d6efd;
 }
 
-/* style untuk rekening */
-.rekening-card {
-  background-color: #fff;
-  padding: 25px 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  max-width: 360px;
-  width: 100%;
-  text-align: center;
-  margin: 5px;
-}
-
-.rekening-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 15px;
-}
-
-.rekening-header img {
-  width: 40px;
-  margin-right: 10px;
-}
-
-.rekening-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: #333;
-}
-
-.rekening-box {
-  background-color: #f9f9f9;
-  padding: 14px 20px;
-  border-radius: 10px;
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.rekening-box span {
-  user-select: text;
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-.rekening-text {
-  line-height: 1;
-  display: flex;
-  align-items: center;
-}
-
-
-.copy-btn {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 14px;
+/* GIFT */
+#gift-box {
+  font-size: 45px;
   cursor: pointer;
+  animation: shake 1.5s infinite;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.copy-btn:hover {
-  background-color: #43a047;
-}
-
-.nama-pemilik {
-  margin-top: 8px;
-  font-size: 16px;
-  color: #555;
-}
-
-.copy-success {
-  margin-top: 10px;
+#gift-box p {
   font-size: 14px;
-  color: #4CAF50;
+}
+
+/* -------------------------
+ RESPONSIVE ROW & COLUMN
+-------------------------- */
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr; /* HP = col-12 */
+  gap: 20px;
+  margin-top: 20px;
+  display: none; /* default hidden */
+}
+
+@media (min-width: 992px) {
+  .cards-row {
+      grid-template-columns: repeat(3, 1fr); /* Desktop = col-4 */
+  }
+}
+
+/* KARTU */
+.atm-card, .address-card {
+  background: linear-gradient(135deg, #134E5E, #71B280);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardIn 0.7s ease forwards;
   display: none;
 }
 
-.qris-img {
-  margin-top: 20px;
-  width: 150px;
-  border-radius: 10px;
+.address-card {
+  background: linear-gradient(135deg, #0854ac, #2c7744);
+}
+
+.atm-bca {
+  background: linear-gradient(135deg, #08489c, #3b8aff);
+}
+
+.bank-logo {
+  width: 80px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.rek-number {
+  display: block;   /* agar menempati baris sendiri */
+  margin: 0;
+  /* font-size: 16px; */
+  font-weight: bold;
+  text-align: left; /* rata kiri */
+}
+
+.rek-name {
+  display: block;   /* agar berada di bawah rek-number */
+  margin: 0;
+  /* font-size: 14px; */
+  /* color: #555; */
+  text-align: left; /* rata kiri */
+}
+
+.card-chip {
+  width: 35px;
+  height: 25px;
+  /* background: gold; */
+  border-radius: 8px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+
+  /* Gambar chip */
+  background-image: url('img/chip-atm.png'); 
+  background-size: cover;       /* otomatis pas memenuhi chip */
+  background-position: center;  /* fokus gambar di tengah */
+  background-repeat: no-repeat; /* tidak berulang */
+}
+
+.card-chip img {
+  width: 170%;    /* 80% dari ukuran div card-chip */
+  height: auto;  /* menjaga proporsi */
+  display: block;
+}
+
+.copy-btn {
+  background: white;
+  color: #134E5E;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(5deg); }
+  40% { transform: rotate(0deg); }
+  60% { transform: rotate(-5deg); }
+}
+
+@keyframes cardIn {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
