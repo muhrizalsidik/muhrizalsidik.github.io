@@ -52,12 +52,18 @@ body {
   color: var(--pink);
   background-color: white;
   box-shadow: var(--shadow);
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: .35s ease;
 }
 
 .hero a:hover {
   background-color: var(--pink);
   color: white;
   box-shadow: var(--shadow);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
 
 .myNavbar {
@@ -158,6 +164,13 @@ body {
   color: white;
   padding-top: 10rem;
   padding-bottom: 8rem;
+
+  background-image: url(../img/bgBlack.jpg);
+  background-size: cover;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .INFO .alamat {
@@ -189,6 +202,22 @@ body {
   border-top: 1px solid #999;
   font-size: 0.9rem;
   font-weight: 300;
+}
+
+/* Efek ketika klik button maps */
+.INFO a.btn-light {
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  transition: .35s ease;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.INFO a.btn-light:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  background: #fff;
 }
 
 .STORY,
@@ -674,5 +703,63 @@ footer li {
       opacity: 1;
       transform: translateY(0);
   }
+}
+
+/* Efek Container foto */
+#GALLERY .col a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Gambar */
+#GALLERY img {
+  transition: 0.6s ease;
+  transform: scale(1);
+}
+
+/* Efek zoom lembut saat hover */
+#GALLERY .col a:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.9);
+}
+
+/* Overlay elegan */
+#GALLERY .col a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: 0.4s ease;
+  border-radius: 12px;
+}
+
+/* Overlay muncul saat hover */
+#GALLERY .col a:hover::before {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Border glow elegant */
+#GALLERY .col a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 0px rgba(255, 192, 203, 0);
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+/* Glow muncul saat hover */
+#GALLERY .col a:hover::after {
+  box-shadow: 0 0 18px rgba(255, 182, 193, 0.7); /* Pink soft wedding glow */
+  opacity: 1;
+}
+
+/* Soft lift effect */
+#GALLERY .col:hover {
+  transform: translateY(-5px);
+  transition: 0.4s ease;
 }
 
