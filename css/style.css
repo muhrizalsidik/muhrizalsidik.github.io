@@ -254,7 +254,7 @@ body {
 .GALLERY span,
 .GIFTS span {
   text-transform: uppercase;
-  color: #666;
+  color: #fff;
   font-size: 0.9rem;
   letter-spacing: 1px;
   display: block;
