@@ -668,6 +668,8 @@ footer li {
 
 .atm-bca {
   background: linear-gradient(135deg, #08489c, #3b8aff);
+  color: #ccc;
+  text-decoration: none;
 }
 
 .bank-logo {
