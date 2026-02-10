@@ -73,6 +73,7 @@ body {
 
 .myNavbar .offcanvas {
   height: 100vh;
+  left: 35vh;
 }
 
 .myNavbar .navbar-brand,
